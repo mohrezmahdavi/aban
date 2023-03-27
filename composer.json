@@ -1,0 +1,30 @@
+{
+    "name": "comma/aban",
+    "description": "SSO Package For Send SMS and Email Raahin",
+    "authors": [
+        {
+            "name": "Mohammadreza Mahdavi",
+            "email": "mrmahdavi38@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Raahin\\Aban\\" : "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Raahin\\Aban\\Provider\\AbanServiceProvider"
+            ],
+            "aliases": {
+                "SSOClient": "Raahin\\Aban\\Facade\\SSOClient",
+                "SMSClient" : "Raahin\\Aban\\Facade\\SMSClient"
+            }
+        }
+    }
+}
